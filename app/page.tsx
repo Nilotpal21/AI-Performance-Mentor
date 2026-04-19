@@ -26,6 +26,9 @@ export default function Home() {
       const data = await res.json()
       sessionStorage.setItem('mentor_output', JSON.stringify(data.mentor_output))
       sessionStorage.setItem('mentor_input', JSON.stringify(data.mentor_input))
+      if (SAMPLE_ATTEMPT.wrong_questions) {
+        sessionStorage.setItem('wrong_questions', JSON.stringify(SAMPLE_ATTEMPT.wrong_questions))
+      }
       router.push('/mentor')
     } catch (err) {
       console.error(err)
@@ -58,7 +61,7 @@ export default function Home() {
           <div className="flex items-start justify-between">
             <div>
               <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Demo Student</p>
-              <h2 className="text-white font-semibold text-lg">Arjun Kumar</h2>
+              <h2 className="text-white font-semibold text-lg">Nilotpal Prakash</h2>
               <p className="text-gray-400 text-sm">JEE Main Mock #4</p>
             </div>
             <div className="text-right">

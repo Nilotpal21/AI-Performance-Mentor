@@ -187,6 +187,23 @@ export default function MentorPage() {
             </div>
           </div>
 
+          {/* CTA: Wrong Questions */}
+          <button
+            onClick={() => router.push('/wrong-questions')}
+            className="w-full flex items-center justify-between px-5 py-4 bg-gray-900 border border-red-500/40 hover:border-red-400/70 rounded-xl text-left transition-colors group"
+          >
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-bold flex-shrink-0">
+                {mentorInput.incorrect_count}
+              </span>
+              <div>
+                <p className="text-white text-sm font-semibold">Review Wrong Questions</p>
+                <p className="text-gray-500 text-xs mt-0.5">See each mistake with explanation &amp; what to fix</p>
+              </div>
+            </div>
+            <span className="text-red-400 group-hover:translate-x-1 transition-transform text-lg">&#8594;</span>
+          </button>
+
           {/* 4. Time */}
           <SectionCard
             title="Time Management"

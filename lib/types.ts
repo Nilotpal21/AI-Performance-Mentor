@@ -1,3 +1,16 @@
+export type WrongQuestion = {
+  id: string
+  chapter: string
+  subject: string
+  question_text: string
+  options: string[]           // A, B, C, D
+  student_answer: string      // e.g. 'B'
+  correct_answer: string      // e.g. 'A'
+  explanation: string
+  marks_lost: number          // negative marks penalty
+  difficulty: 'Easy' | 'Medium' | 'Hard'
+}
+
 export type AttemptData = {
   attempt_id: string
   exam_track: 'JEE Main' | 'JEE Advanced' | 'NEET'
@@ -26,6 +39,7 @@ export type AttemptData = {
     incorrect: number
     total: number
   }>
+  wrong_questions?: WrongQuestion[]
 }
 
 export type MentorInput = {
