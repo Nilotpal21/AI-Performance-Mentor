@@ -1,6 +1,6 @@
 # AI Performance Mentor — JEE / NEET
 
-A working prototype of the AI Performance Mentor described in the product solution document.
+A working prototype of the AI Performance Mentor.
 
 ## What it does
 
